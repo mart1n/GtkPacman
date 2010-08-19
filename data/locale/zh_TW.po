@@ -1,0 +1,778 @@
+# Chinese translations for gtkpacman package.
+# Copyright (C) 2005-2007 by Stefano Esposito
+# This file is distributed under the same license as the gtkpacman package.
+# Cheng-Wei Chien <e.cwchien@gmail.com>, 2006-2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gtkPacman\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-01-18 15:41+0100\n"
+"PO-Revision-Date: 2006-12-22 23:44+0800\n"
+"Last-Translator: Cheng-Wei Chien <e.cwchien@gmail.com>\n"
+"Language-Team: Cheng-Wei Chien <e.cwchien@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Chinese\n"
+"X-Poedit-Country: TAIWAN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Pootle 0.10.1\n"
+
+#: gtkpacman.glade:7
+#, fuzzy
+msgid "gtkpacman 2.2"
+msgstr "gtkPacman"
+
+#: gtkpacman.glade:21
+msgid "_File"
+msgstr "檔案 (_F)"
+
+#: gtkpacman.glade:41
+msgid "_Queue Actions"
+msgstr "佇列動作 (_Q)"
+
+#: gtkpacman.glade:48 gtkpacman.glade:567
+msgid "_Add to install queue"
+msgstr "加入待安裝佇列 (_A)"
+
+#: gtkpacman.glade:64 gtkpacman.glade:583
+msgid "Remove from _install queue"
+msgstr "移出待安裝佇列 (_i)"
+
+#: gtkpacman.glade:85 gtkpacman.glade:604
+msgid "Add to _remove queue"
+msgstr "加入待移除佇列 (_r)"
+
+#: gtkpacman.glade:101 gtkpacman.glade:620
+msgid "R_emove from remove queue"
+msgstr "移出待移除佇列 (_e)"
+
+#: gtkpacman.glade:122
+msgid "E_xecute"
+msgstr "執行 (_x)"
+
+#: gtkpacman.glade:142
+msgid "Immediate Actions"
+msgstr "即時動作"
+
+#: gtkpacman.glade:149
+msgid "_Upgrade system"
+msgstr "升級系統 (_U)"
+
+#: gtkpacman.glade:165
+msgid "Refresh _database"
+msgstr "更新資料庫 (_d)"
+
+#: gtkpacman.glade:186
+msgid "Install/Upgrade package from _local file"
+msgstr "從本地檔案安裝 (升級) 套件 (_l)"
+
+#: gtkpacman.glade:200
+msgid "Clear cache"
+msgstr "清除快取"
+
+#: gtkpacman.glade:216
+msgid "Empty cache"
+msgstr "清空快取"
+
+#: gtkpacman.glade:236
+msgid "_Help"
+msgstr "說明 (_H)"
+
+#: gtkpacman.glade:266
+msgid "Add to install queue"
+msgstr "加入待安裝佇列"
+
+#: gtkpacman.glade:278
+msgid "Delete from install queue"
+msgstr "移出待安裝佇列"
+
+#: gtkpacman.glade:299
+msgid "Add to remove queue"
+msgstr "加入待移除佇列"
+
+#: gtkpacman.glade:311
+msgid "Delete from remove queue"
+msgstr "移出待移除佇列"
+
+#: gtkpacman.glade:332
+msgid "Execute queued operations"
+msgstr "執行佇列中的程序"
+
+#: gtkpacman.glade:353
+msgid "Upgrade system"
+msgstr "升級系統"
+
+#: gtkpacman.glade:365
+msgid "Refresh database"
+msgstr "更新資料庫"
+
+#: gtkpacman.glade:386
+msgid "Search packages"
+msgstr "搜尋套件"
+
+#: gtkpacman.glade:486
+msgid "Summary"
+msgstr "總結"
+
+#: gtkpacman.glade:516
+msgid "Files"
+msgstr "檔案"
+
+#: gtkpacman.glade:641
+msgid "_Search"
+msgstr "搜尋 (_S)"
+
+#: ../gtkPacman/dialogs.py:44
+msgid ""
+"You must be root to fully use gtkpacman.\n"
+"Since you aren't root, gtkpacman will not allow any packages management "
+"operation (Install/Remove)"
+msgstr ""
+"您必須取得管理者權限才能使用 gtkpacman 完整的功能。\n"
+"既然您尚未取得權限，gtkpacman 不允許任何的套件管理程序 (安裝或移除)"
+
+#: ../gtkPacman/dialogs.py:53
+#, fuzzy, python-format
+msgid "Package %s is in IgnorePkg. Install it anyway?"
+msgstr "套件 %s 並未安裝"
+
+#: ../gtkPacman/dialogs.py:62
+#, python-format
+msgid "Package %s is in HoldPkg. Are You sure you want to remove %s"
+msgstr ""
+
+#: ../gtkPacman/dialogs.py:69
+msgid "Confirm"
+msgstr "最後確認"
+
+#: ../gtkPacman/dialogs.py:91 ../gtkPacman/dialogs.py:119
+#: ../gtkPacman/dialogs.py:296 ../gtkPacman/dialogs.py:324
+#: ../gtkPacman/gui.py:133
+msgid "Package"
+msgstr "套件"
+
+#: ../gtkPacman/dialogs.py:94 ../gtkPacman/dialogs.py:122
+#: ../gtkPacman/dialogs.py:299
+msgid "Version"
+msgstr "版本"
+
+#: ../gtkPacman/dialogs.py:142
+msgid "Are you sure you want to install/remove those packages?"
+msgstr "您確定要安裝 (移除) 那些套件？"
+
+#: ../gtkPacman/dialogs.py:144
+msgid "Packages to install"
+msgstr "待安裝的套件"
+
+#: ../gtkPacman/dialogs.py:145
+msgid "Packages to remove"
+msgstr "待移除的套件"
+
+#: ../gtkPacman/dialogs.py:171
+msgid "Warning!"
+msgstr "警告！"
+
+#: ../gtkPacman/dialogs.py:181
+msgid ""
+"This packages requires one of the packages you've selected for removal.\n"
+"Do you want to remove them all?"
+msgstr ""
+"這套件相依於您打算要移除的套件。\n"
+"您要一併移除它們嗎？"
+
+#: ../gtkPacman/dialogs.py:227
+#, fuzzy
+msgid ""
+"Copyright (C)2005-2008 by Stefano Esposito.\n"
+"Rights to copy, modify, and redistribute are granted under the GNU General "
+"Public License Terms"
+msgstr ""
+"版權所有 (C)2005-2006 Stefano Esposito。\n"
+"在 GNU 通用公共許可證條款的擔保下，您可以複製、修改或重新發佈本程式。"
+
+#: ../gtkPacman/dialogs.py:228
+msgid "Gtk package manager based on pacman"
+msgstr "基於 pacman 的 Gtk 介面套件管理員"
+
+#: ../gtkPacman/dialogs.py:229
+msgid ""
+"gtkPacman is free software; you can redistribute it and/or modify\n"
+"it under the terms of the GNU General Public License as published by\n"
+"the Free Software Foundation; either version 2 of the License, or\n"
+"(at your option) any later version.\n"
+"\n"
+"gtkPacman program is distributed in the hope that it will be useful,\n"
+"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+"GNU General Public License for more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License\n"
+"along with this program; if not, write to the Free Software\n"
+"Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"本程式是自由軟體，您可以遵照自由軟體基金會 (Free Software Foundation) 出版的 "
+"GNU 通用公共許可證條款 (GNU General Public License) 第二版來修改和重新發佈這"
+"一程式，或者自由選擇使用任何更新的版本。\n"
+"\n"
+"發佈這一程式的目的是希望它有用，但沒有任何擔保。甚至沒有適合特定目的而隱含的"
+"擔保。更詳細的情況請參閱 GNU 通用公共許可證。\n"
+"\n"
+"您應該已經和程式一起收到一份 GNU 通用公共許可證的副本。如果還沒有，寫信給：\n"
+"\n"
+"Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  "
+"02110-1301  USA"
+
+#: ../gtkPacman/dialogs.py:327 ../gtkPacman/gui.py:135
+msgid "Installed Version"
+msgstr "已安裝版本"
+
+#: ../gtkPacman/dialogs.py:356
+msgid "Terminal"
+msgstr "終端機"
+
+#: ../gtkPacman/dialogs.py:383
+msgid "Choose package to install"
+msgstr "請選擇要安裝的套件"
+
+#: ../gtkPacman/dialogs.py:430
+msgid "Search for.."
+msgstr "搜尋..."
+
+#: ../gtkPacman/dialogs.py:440
+msgid "Insert keywords:"
+msgstr "請輸入關鍵字："
+
+#: ../gtkPacman/dialogs.py:475
+msgid "_Terminal"
+msgstr "終端機 (_T)"
+
+#: ../gtkPacman/dialogs.py:539
+msgid "Confirm Upgrade"
+msgstr "套件升級最後確認"
+
+#: ../gtkPacman/dialogs.py:568
+msgid "Are you sure yo want to upgrade those packages?\n"
+msgstr "您確定要升級那些套件？\n"
+
+#: ../gtkPacman/gui.py:79 ../gtkPacman/gui.py:559 ../gtkPacman/gui.py:644
+#: ../gtkPacman/gui.py:676 ../gtkPacman/gui.py:726
+msgid "Done."
+msgstr "已完成。"
+
+#: ../gtkPacman/gui.py:138 ../gtkPacman/gui.py:321
+msgid "Avaible Version"
+msgstr "可用版本"
+
+#: ../gtkPacman/gui.py:141 ../gtkPacman/gui.py:290
+msgid "Repo"
+msgstr "套件庫"
+
+#: ../gtkPacman/gui.py:145 ../gtkPacman/gui.py:179 ../gtkPacman/gui.py:207
+#: ../gtkPacman/gui.py:230 ../gtkPacman/gui.py:287
+msgid "All"
+msgstr "全部"
+
+#: ../gtkPacman/gui.py:185 ../gtkPacman/gui.py:223 ../gtkPacman/gui.py:309
+#: ../gtkPacman/gui.py:314
+msgid "all"
+msgstr "全部"
+
+#: ../gtkPacman/gui.py:186 ../gtkPacman/gui.py:224 ../gtkPacman/gui.py:257
+#: ../gtkPacman/gui.py:309
+msgid "installed"
+msgstr "已安裝"
+
+#: ../gtkPacman/gui.py:189 ../gtkPacman/gui.py:209 ../gtkPacman/gui.py:212
+#: ../gtkPacman/gui.py:215 ../gtkPacman/gui.py:230 ../gtkPacman/gui.py:251
+#: ../gtkPacman/gui.py:297
+msgid "foreigners"
+msgstr "非本地套件庫"
+
+#: ../gtkPacman/gui.py:284
+msgid "Search"
+msgstr "搜尋"
+
+#: ../gtkPacman/gui.py:294
+#, fuzzy
+msgid "Available Version"
+msgstr "可用版本"
+
+#: ../gtkPacman/gui.py:446
+#, python-format
+msgid ""
+"%s is not in the database.\n"
+"This is probably a bug in gtkpacman. If you think it's so, please send me a "
+"bug report."
+msgstr ""
+"%s 並不在資料庫裡。\n"
+"這可能是個 gtkpacman 錯誤。若您也這樣認為，請給我一份錯誤回報。"
+
+#: ../gtkPacman/gui.py:466
+#, fuzzy, python-format
+msgid ""
+"%(dep)s is not in the database. %(dep)s is required by %(pkg)s.\n"
+"This maybe either an error in %(pkg)s packaging or a gtkpacman's bug.\n"
+"If you think it's the first, contact the %(pkg)s maintainer, else fill a bug "
+"report for gtkpacman, please."
+msgstr ""
+"%{dep}s 並不在資料庫裡。%{dep}s 相依於 %{pkg}s。\n"
+"這可能是 %{pkg}s 套件打包上的疏失或 gtkpacman 的錯誤。\n"
+"若您認為是前者，請聯絡 %{pkg}s 的套件維護者；反之，請填一份錯誤回報給 "
+"gtkpacman。"
+
+#: ../gtkPacman/gui.py:508
+msgid "Executing queued operations"
+msgstr "正在執行佇列中的程序"
+
+#: ../gtkPacman/gui.py:587
+msgid "You should insert at least one keyword to search for"
+msgstr ""
+
+#: ../gtkPacman/gui.py:595
+#, python-format
+msgid "Search results for '%s'"
+msgstr "'%s' 的搜尋結果"
+
+#: ../gtkPacman/gui.py:610
+#, python-format
+msgid "Installing %s"
+msgstr "正在安裝 %s"
+
+#: ../gtkPacman/gui.py:658
+#, fuzzy
+msgid "Clearing cache..."
+msgstr "正在清除快取..."
+
+#: ../gtkPacman/gui.py:667
+msgid "Emptying cache..."
+msgstr "正在清空快取..."
+
+#: ../gtkPacman/gui.py:694 ../gtkPacman/gui.py:714
+msgid "Refreshing database"
+msgstr "正在更新資料庫"
+
+#: ../gtkPacman/gui.py:702
+msgid "There isn't any packages to upgrade"
+msgstr "沒有待升級的套件"
+
+#: ../gtkPacman/pacman.py:55
+msgid "version must be a string"
+msgstr "版本必須是個字串"
+
+#: ../gtkPacman/pacman.py:63
+msgid "inst must be True or False"
+msgstr "inst 必須是真 (True) 或假 (False)"
+
+#: ../gtkPacman/pacman.py:71
+msgid "inst_ver must be a string"
+msgstr "inst_ver 必須是個字串"
+
+#: ../gtkPacman/pacman.py:251
+#, python-format
+msgid ""
+"Description: %s\n"
+"Depends on: %s\n"
+"Required by: %s\n"
+"Size: %s\n"
+"Packager: %s\n"
+"Built: %s\n"
+"Installed: %s\n"
+"Reason: %s"
+msgstr ""
+"套件介紹：%s\n"
+"相依於：%s\n"
+"為下列所需：%s\n"
+"大小：%s\n"
+"套件建立者：%s\n"
+"建立於：%s\n"
+"安裝於：%s\n"
+"原因：%s"
+
+#: ../gtkPacman/pacman.py:255
+#, python-format
+msgid ""
+"Description: %s\n"
+"Depends on: %s\n"
+"Size (compressed): %s"
+msgstr ""
+"套件介紹：%s\n"
+"相依於：%s\n"
+"大小 (壓縮後)：%s"
+
+#: ../gtkPacman/pacman.py:325
+msgid "Installed as a dependency for another package"
+msgstr "因其他套件相依而安裝"
+
+#: ../gtkPacman/pacman.py:327
+msgid "Excplicitly installed"
+msgstr "指定安裝"
+
+#: ../gtkPacman/pacman.py:376
+#, python-format
+msgid "%s is not installed"
+msgstr "%s 並未安裝"
+
+#: ../gtkPacman/pacman.py:424
+#, python-format
+msgid "%s is not in the database"
+msgstr "%s 不在資料庫裡"
+
+#~ msgid ""
+#~ "You're not root. You won't be able to edit configuration. If you want to "
+#~ "manage packages you'll be asked for root password time by time"
+#~ msgstr ""
+#~ "您並非管理者故無法編輯設定。如果您想要管理套件，您將會一再地被詢問管理者密"
+#~ "碼"
+
+#~ msgid "Clearing cache"
+#~ msgstr "正在清除快取"
+
+#~ msgid "Emptying cache"
+#~ msgstr "正在清空快取"
+
+#~ msgid "Refreshing Database"
+#~ msgstr "正在更新資料庫"
+
+#~ msgid "Upgrading System"
+#~ msgstr "正在升級系統"
+
+#~ msgid "Package %s isn't installed"
+#~ msgstr "套件 %s 並未安裝"
+
+#~ msgid "Please, insert a package name"
+#~ msgstr "請輸入套件名稱"
+
+#~ msgid "Package %s doesn't exist in the database"
+#~ msgstr "資料庫中找不到套件 %s"
+
+#~ msgid "No package find with this keyword: %s"
+#~ msgstr "找不到任何帶有關鍵字：%s 的套件"
+
+#~ msgid ""
+#~ "This is probably a bug.\n"
+#~ "            Plaese report it at http://gna.org/projects/gtkpacman"
+#~ msgstr ""
+#~ "這或許是隻臭蟲 (bug)。\n"
+#~ "            請回報給 http://gna.org/projects/gtkpacman"
+
+#~ msgid "Repository"
+#~ msgstr "套件庫"
+
+#~ msgid "Installed"
+#~ msgstr "已安裝"
+
+#~ msgid "Not installed"
+#~ msgstr "未安裝"
+
+#~ msgid "To upgrade"
+#~ msgstr "待升級"
+
+#~ msgid "Orphans"
+#~ msgstr "孤兒 (未和其他套件相依)"
+
+#~ msgid "Manually installed"
+#~ msgstr "自訂安裝"
+
+#~ msgid "Search for..."
+#~ msgstr "搜尋..."
+
+#~ msgid ""
+#~ "This is probably a bug\n"
+#~ "            Please, report it at http://gna.org/projects/gtkpacman"
+#~ msgstr ""
+#~ "這可能是隻臭蟲 (bug)。\n"
+#~ "            請回報給 http://gna.org/projects/gtkpacman"
+
+#~ msgid "Installing/Upgrading %s"
+#~ msgstr "正在安裝 (升級) %s"
+
+#~ msgid "U action requires a package argument"
+#~ msgstr "U 動作需要套件參數"
+
+#~ msgid "Upgrading %s from local file"
+#~ msgstr "正在從本地檔案升級 %s"
+
+#~ msgid "A action requires a package argument"
+#~ msgstr "A 動作需要套件參數"
+
+#~ msgid "Installing %s from local file"
+#~ msgstr "正在從本地檔案安裝 %s"
+
+#~ msgid "R action requires a package argument"
+#~ msgstr "R 動作需要套件參數"
+
+#~ msgid "Removing %s"
+#~ msgstr "正在移除 %s"
+
+#~ msgid "Click button to close terminal"
+#~ msgstr "點選按鈕以關閉終端機"
+
+#~ msgid "Done"
+#~ msgstr "完成"
+
+#~ msgid "Allow bold"
+#~ msgstr "允許粗體字"
+
+#~ msgid "Be Verbose"
+#~ msgstr "列出所有訊息"
+
+#~ msgid "Cascade remove"
+#~ msgstr "連續移除"
+
+#~ msgid "Check dependencies"
+#~ msgstr "檢查相依性"
+
+#~ msgid "Close terminal"
+#~ msgstr "關閉終端機"
+
+#~ msgid "Common"
+#~ msgstr "一般"
+
+#~ msgid "Copyright (C) 2005 by Stefano Esposito"
+#~ msgstr "版權所有 (C) 2005 Stefano Esposito"
+
+#~ msgid "Core options"
+#~ msgstr "主要選項"
+
+#~ msgid "Dependencies"
+#~ msgstr "相依性"
+
+#~ msgid "Do not ask for any confirmation"
+#~ msgstr "不做任何確認"
+
+#~ msgid ""
+#~ "Don't remove files from system, only remove entry from \"installed\" "
+#~ "database"
+#~ msgstr "僅移除 \"已安裝\" 資料庫的項目而不從系統裡移除檔案"
+
+#~ msgid "Don't save configuration files"
+#~ msgstr "不儲存設定檔"
+
+#~ msgid "Download Only"
+#~ msgstr "只下載不安裝"
+
+#~ msgid "Filelist"
+#~ msgstr "檔案列表"
+
+#~ msgid "Force install"
+#~ msgstr "強制安裝"
+
+#~ msgid ""
+#~ "Giovanni Scafora <linuxmania@gmail.com> (French)\n"
+#~ "Mattias Giese <Mattias.Giese@web.de> (German)\n"
+#~ "Stefano Esposito <ragnarok@email.it> (Italian)\n"
+#~ "Jens Perssons  <xerxes2@gmail.com> (Sweidish)"
+#~ msgstr ""
+#~ "Giovanni Scafora <linuxmania@gmail.com> (French)\n"
+#~ "Mattias Giese <Mattias.Giese@web.de> (German)\n"
+#~ "Stefano Esposito <ragnarok@email.it> (Italian)\n"
+#~ "Jens Perssons  <xerxes2@gmail.com> (Sweidish)\n"
+#~ "Cheng-Wei Chien <e.cwchien@gmail.com> (Trad-Chinese)"
+
+#~ msgid "Gtk Frontend for Archlinux pacman"
+#~ msgstr "Archlinux pacman 套件管理系統的 Gtk 前端 "
+
+#~ msgid "Gui options"
+#~ msgstr "介面選項"
+
+#~ msgid "In_stall/Upgrade package from database"
+#~ msgstr "從資料庫安裝 (_s) (升級) 套件"
+
+#~ msgid "Install Package from local file"
+#~ msgstr "從本地檔案安裝套件"
+
+#~ msgid "Install from file"
+#~ msgstr "從檔案安裝"
+
+#~ msgid "Install package from local file"
+#~ msgstr "從本地檔案安裝套件"
+
+#~ msgid "Install/Upgrade"
+#~ msgstr "安裝 (升級)"
+
+#~ msgid "Install/Upgrade Package from database"
+#~ msgstr "從資料庫安裝 (升級) 套件"
+
+#~ msgid "Install/Upgrade package from database"
+#~ msgstr "從資料庫安裝 (升級) 套件"
+
+#~ msgid "Installed files owned by selected package"
+#~ msgstr "選取套件所包含的已安裝檔案"
+
+#~ msgid "List of packages in the database"
+#~ msgstr "資料庫中的套件列表"
+
+#~ msgid "List of packages that need selected package"
+#~ msgstr "相依於選取套件的套件列表"
+
+#~ msgid "List of selected package dependencies"
+#~ msgstr "選取套件的相依性列表"
+
+#~ msgid "No confirm"
+#~ msgstr "不做確認"
+
+#~ msgid "Preferences"
+#~ msgstr "設定"
+
+#~ msgid "Quick filter:"
+#~ msgstr "快速過濾："
+
+#~ msgid "Recursive remove"
+#~ msgstr "遞迴移除"
+
+#~ msgid "Refresh Database"
+#~ msgstr "更新資料庫"
+
+#~ msgid "Refresh database when upgrade system"
+#~ msgstr "升級系統時更新資料庫"
+
+#~ msgid "Remove"
+#~ msgstr "移除"
+
+#~ msgid "Remove Package"
+#~ msgstr "移除套件"
+
+#~ msgid "Remove all packages from local packages repo"
+#~ msgstr "移除所有本地套件庫的套件"
+
+#~ msgid "Remove configuration files too"
+#~ msgstr "一併移除設定檔"
+
+#~ msgid "Remove old packages from local repo"
+#~ msgstr "移除本地套件庫的舊套件"
+
+#~ msgid "Remove only database entry"
+#~ msgstr "僅移除資料庫項目"
+
+#~ msgid "Remove selected package and all packages that depend on it"
+#~ msgstr "移除所選套件及所有相依於它的套件"
+
+#~ msgid ""
+#~ "Remove selected packages and its dependencies (only if it's the only "
+#~ "package that depends on them)"
+#~ msgstr "移除所選套件及相依於它們的套件 (僅相依於它們的情形下)"
+
+#~ msgid "Required by"
+#~ msgstr "為下列所需"
+
+#~ msgid "Scroll on keystroke"
+#~ msgstr "捲動至鍵擊處"
+
+#~ msgid "Scroll on output"
+#~ msgstr "捲動至輸出列"
+
+#~ msgid "Select A File"
+#~ msgstr "只選擇一個檔案"
+
+#~ msgid "Select a file"
+#~ msgstr "選擇檔案"
+
+#~ msgid "Select background color"
+#~ msgstr "選擇背景顏色"
+
+#~ msgid "Select background image"
+#~ msgstr "選擇背景圖案"
+
+#~ msgid "Select foreground color"
+#~ msgstr "選擇前景顏色"
+
+#~ msgid "Select terminal font"
+#~ msgstr "選擇終端機字型"
+
+#~ msgid "Set scrollback lines"
+#~ msgstr "設定捲動列數"
+
+#~ msgid "Show Window"
+#~ msgstr "顯示視窗"
+
+#~ msgid "Summary of selected package"
+#~ msgstr "所選套件總結"
+
+#~ msgid "Terminal Preferences"
+#~ msgstr "終端機設定"
+
+#~ msgid ""
+#~ "This program is free software; you can redistribute it and/\n"
+#~ "or modify it under the terms of the GNU General Public \n"
+#~ "License as published by the Free Software Foundation; \n"
+#~ "either version 2 of the License, or (at your option) any later \n"
+#~ "version.\n"
+#~ "\n"
+#~ "This program is distributed in the hope that it will be useful,\n"
+#~ "but WITHOUT ANY WARRANTY; without even the implied \n"
+#~ "warranty of MERCHANTABILITY or FITNESS FOR A \n"
+#~ "PARTICULAR PURPOSE.  See the GNU General Public License \n"
+#~ "for more details.\n"
+#~ "\n"
+#~ "You should have received a copy of the GNU General Public \n"
+#~ "License along with this program; if not, write to the Free \n"
+#~ "Software Foundation, Inc., 51 Franklin St, Fifth Floor, \n"
+#~ "Boston, MA  02110-1301  USA"
+#~ msgstr ""
+#~ "本程式是自由軟體，您可以遵照自由軟體基金會 (Free Software Foundation) 出版"
+#~ "的 GNU 通用公共許可證條款 (GNU General Public License) 第二版來修改和重新"
+#~ "發佈這一程式，或者自由選擇使用任何更新的版本。\n"
+#~ "\n"
+#~ "發佈這一程式的目的是希望它有用，但沒有任何擔保。甚至沒有適合特定目的而隱含"
+#~ "的擔保。更詳細的情況請參閱 GNU 通用公共許可證。\n"
+#~ "\n"
+#~ "您應該已經和程式一起收到一份 GNU 通用公共許可證的副本。如果還沒有，寫信"
+#~ "給：\n"
+#~ "\n"
+#~ "Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  "
+#~ "02110-1301  USA"
+
+#~ msgid "Upgrade Package from local file"
+#~ msgstr "從本地檔案升級套件"
+
+#~ msgid "Upgrade System"
+#~ msgstr "升級系統"
+
+#~ msgid "Upgrade from file"
+#~ msgstr "從檔案升級"
+
+#~ msgid "Upgrade package from local file"
+#~ msgstr "從本地檔案升級套件"
+
+#~ msgid "Upgrade s_ystem"
+#~ msgstr "升級系統 (_y)"
+
+#~ msgid "Use alternative configuration file"
+#~ msgstr "使用自訂設定檔"
+
+#~ msgid "Use alternative database:          "
+#~ msgstr "使用自訂資料庫："
+
+#~ msgid "Use alternative root:                  "
+#~ msgstr "使用自訂根目錄："
+
+#~ msgid "Verbose output"
+#~ msgstr "列出所有訊息"
+
+#~ msgid ""
+#~ "When you click on \"upgrade system\" button, refresh database before "
+#~ "checking packages to upgrade"
+#~ msgstr "當您點選 \"升級系統\" 按鈕時，先檢查待升級的套件再更新資料庫"
+
+#~ msgid "_Add package from local file"
+#~ msgstr "從本地檔案加入套件 (_A)"
+
+#~ msgid "_Edit"
+#~ msgstr "編輯 (_E)"
+
+#~ msgid "_Pacman"
+#~ msgstr "呼叫 Pacman (_P)"
+
+#~ msgid "_Remove package"
+#~ msgstr "移除套件 (_R)"
+
+#~ msgid "_Upgrade package from local file"
+#~ msgstr "從本地檔案升級套件 (_U)"
+
+#~ msgid "gtkPacman"
+#~ msgstr "gtkPacman"
+
+#~ msgid "insert the name/path of the package to install"
+#~ msgstr "請輸入要安裝的套件名稱 (路徑)"

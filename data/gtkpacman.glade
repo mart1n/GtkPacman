@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
+<!--*- mode: xml -*-->
+<glade-interface>
+  <widget class="GtkWindow" id="main_win">
+    <property name="visible">True</property>
+    <property name="title" translatable="yes">gtkpacman 2.3.1</property>
+    <property name="default_width">650</property>
+    <property name="default_height">433</property>
+    <signal name="destroy" handler="quit"/>
+    <signal name="delete_event" handler="quit"/>
+    <child>
+      <widget class="GtkVBox" id="vbox">
+        <property name="visible">True</property>
+        <child>
+          <widget class="GtkMenuBar" id="menubar">
+            <property name="visible">True</property>
+            <child>
+              <widget class="GtkMenuItem" id="file">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">_File</property>
+                <property name="use_underline">True</property>
+                <child>
+                  <widget class="GtkMenu" id="file_menu">
+                    <child>
+                      <widget class="GtkImageMenuItem" id="file_quit">
+                        <property name="visible">True</property>
+                        <property name="label">gtk-quit</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="activate" handler="quit"/>
+                      </widget>
+                    </child>
+                  </widget>
+                </child>
+              </widget>
+            </child>
+            <child>
+              <widget class="GtkMenuItem" id="queue">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">_Queue Actions</property>
+                <property name="use_underline">True</property>
+                <child>
+                  <widget class="GtkMenu" id="queue_menu">
+                    <child>
+                      <widget class="GtkImageMenuItem" id="pacman_add_install">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">_Add to install queue</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="add_install"/>
+                        <accelerator key="A" modifiers="GDK_CONTROL_MASK" signal="activate"/>
+                        <child internal-child="image">
+                          <widget class="GtkImage" id="image55">
+                            <property name="visible">True</property>
+                            <property name="stock">gtk-add</property>
+                            <property name="icon_size">1</property>
+                          </widget>
+                        </child>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkImageMenuItem" id="pacman_remove_install">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Remove from _install queue</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="remove_install"/>
+                        <accelerator key="A" modifiers="GDK_CONTROL_MASK | GDK_MOD1_MASK" signal="activate"/>
+                        <child internal-child="image">
+                          <widget class="GtkImage" id="image56">
+                            <property name="visible">True</property>
+                            <property name="stock">gtk-undo</property>
+                            <property name="icon_size">1</property>
+                          </widget>
+                        </child>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkSeparatorMenuItem" id="separator1">
+                        <property name="visible">True</property>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkImageMenuItem" id="pacman_add_remove">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Add to _remove queue</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="add_remove"/>
+                        <accelerator key="R" modifiers="GDK_CONTROL_MASK" signal="activate"/>
+                        <child internal-child="image">
+                          <widget class="GtkImage" id="image57">
+                            <property name="visible">True</property>
+                            <property name="stock">gtk-remove</property>
+                            <property name="icon_size">1</property>
+                          </widget>
+                        </child>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkImageMenuItem" id="pacman_remove_remove">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">R_emove from remove queue</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="remove_remove"/>
+                        <accelerator key="R" modifiers="GDK_CONTROL_MASK | GDK_MOD1_MASK" signal="activate"/>
+                        <child internal-child="image">
+                          <widget class="GtkImage" id="image58">
+                            <property name="visible">True</property>
+                            <property name="stock">gtk-redo</property>
+                            <property name="icon_size">1</property>
+                          </widget>
+                        </child>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkSeparatorMenuItem" id="separator2">
+                        <property name="visible">True</property>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkImageMenuItem" id="pacman_execute">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">E_xecute</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="execute"/>
+                        <accelerator key="E" modifiers="GDK_CONTROL_MASK" signal="activate"/>
+                        <child internal-child="image">
+                          <widget class="GtkImage" id="image59">
+                            <property name="visible">True</property>
+                            <property name="stock">gtk-ok</property>
+                            <property name="icon_size">1</property>
+                          </widget>
+                        </child>
+                      </widget>
+                    </child>
+                  </widget>
+                </child>
+              </widget>
+            </child>
+            <child>
+              <widget class="GtkMenuItem" id="immediate">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Immediate Actions</property>
+                <property name="use_underline">True</property>
+                <child>
+                  <widget class="GtkMenu" id="immediate_menu">
+                    <child>
+                      <widget class="GtkImageMenuItem" id="pacman_up_sys">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">_Upgrade system</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="up_sys"/>
+                        <accelerator key="A" modifiers="GDK_SHIFT_MASK | GDK_CONTROL_MASK" signal="activate"/>
+                        <child internal-child="image">
+                          <widget class="GtkImage" id="image60">
+                            <property name="visible">True</property>
+                            <property name="stock">gtk-goto-top</property>
+                            <property name="icon_size">1</property>
+                          </widget>
+                        </child>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkImageMenuItem" id="pacman_refr_db">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Refresh _database</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="refr_db"/>
+                        <accelerator key="F5" modifiers="GDK_MOD1_MASK" signal="activate"/>
+                        <child internal-child="image">
+                          <widget class="GtkImage" id="image61">
+                            <property name="visible">True</property>
+                            <property name="stock">gtk-refresh</property>
+                            <property name="icon_size">1</property>
+                          </widget>
+                        </child>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkSeparatorMenuItem" id="separator3">
+                        <property name="visible">True</property>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkMenuItem" id="pacman_add_local">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Install/Upgrade package from _local file</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="add_local"/>
+                        <accelerator key="L" modifiers="GDK_CONTROL_MASK" signal="activate"/>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkImageMenuItem" id="makepkg">
+                        <property name="visible">True</property>
+                        <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                        <property name="label" translatable="yes">Ma_ke a package and install it</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="make_pkg"/>
+                        <accelerator key="K" modifiers="GDK_CONTROL_MASK" signal="activate"/>
+                        <child internal-child="image">
+                          <widget class="GtkImage" id="menu-item-image15">
+                            <property name="visible">True</property>
+                            <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                            <property name="stock">gtk-convert</property>
+                          </widget>
+                        </child>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkSeparatorMenuItem" id="separator4">
+                        <property name="visible">True</property>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkImageMenuItem" id="pacman_clear_cache">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Clear cache</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="clear_cache"/>
+                        <accelerator key="C" modifiers="GDK_CONTROL_MASK" signal="activate"/>
+                        <child internal-child="image">
+                          <widget class="GtkImage" id="image62">
+                            <property name="visible">True</property>
+                            <property name="stock">gtk-clear</property>
+                            <property name="icon_size">1</property>
+                          </widget>
+                        </child>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkImageMenuItem" id="pacman_empty_cache">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Empty cache</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="empty_cache"/>
+                        <accelerator key="C" modifiers="GDK_SHIFT_MASK | GDK_CONTROL_MASK" signal="activate"/>
+                        <child internal-child="image">
+                          <widget class="GtkImage" id="image63">
+                            <property name="visible">True</property>
+                            <property name="stock">gtk-delete</property>
+                            <property name="icon_size">1</property>
+                          </widget>
+                        </child>
+                      </widget>
+                    </child>
+                  </widget>
+                </child>
+              </widget>
+            </child>
+            <child>
+              <widget class="GtkMenuItem" id="help">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">_Help</property>
+                <property name="use_underline">True</property>
+                <child>
+                  <widget class="GtkMenu" id="help_menu">
+                    <child>
+                      <widget class="GtkImageMenuItem" id="help_about">
+                        <property name="visible">True</property>
+                        <property name="label">gtk-about</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="activate" handler="about"/>
+                      </widget>
+                    </child>
+                  </widget>
+                </child>
+              </widget>
+            </child>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkToolbar" id="toolbar">
+            <property name="visible">True</property>
+            <property name="toolbar_style">GTK_TOOLBAR_ICONS</property>
+            <child>
+              <widget class="GtkToolButton" id="add_install">
+                <property name="visible">True</property>
+                <property name="tooltip" translatable="yes">Add to install queue</property>
+                <property name="use_underline">True</property>
+                <property name="stock_id">gtk-add</property>
+                <signal name="clicked" handler="add_install"/>
+              </widget>
+              <packing>
+                <property name="expand">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkToolButton" id="remove_install">
+                <property name="visible">True</property>
+                <property name="tooltip" translatable="yes">Delete from install queue</property>
+                <property name="use_underline">True</property>
+                <property name="stock_id">gtk-undo</property>
+                <signal name="clicked" handler="remove_install"/>
+              </widget>
+              <packing>
+                <property name="expand">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkSeparatorToolItem" id="separatortoolitem3">
+                <property name="visible">True</property>
+              </widget>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkToolButton" id="add_remove">
+                <property name="visible">True</property>
+                <property name="tooltip" translatable="yes">Add to remove queue</property>
+                <property name="use_underline">True</property>
+                <property name="stock_id">gtk-remove</property>
+                <signal name="clicked" handler="add_remove"/>
+              </widget>
+              <packing>
+                <property name="expand">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkToolButton" id="remove_remove">
+                <property name="visible">True</property>
+                <property name="tooltip" translatable="yes">Delete from remove queue</property>
+                <property name="use_underline">True</property>
+                <property name="stock_id">gtk-redo</property>
+                <signal name="clicked" handler="remove_remove"/>
+              </widget>
+              <packing>
+                <property name="expand">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkSeparatorToolItem" id="separatortoolitem2">
+                <property name="visible">True</property>
+              </widget>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkToolButton" id="execute">
+                <property name="visible">True</property>
+                <property name="tooltip" translatable="yes">Execute queued operations</property>
+                <property name="use_underline">True</property>
+                <property name="stock_id">gtk-ok</property>
+                <signal name="clicked" handler="execute"/>
+              </widget>
+              <packing>
+                <property name="expand">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkSeparatorToolItem" id="separatortoolitem1">
+                <property name="visible">True</property>
+              </widget>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkToolButton" id="up_sys">
+                <property name="visible">True</property>
+                <property name="tooltip" translatable="yes">Upgrade system</property>
+                <property name="use_underline">True</property>
+                <property name="stock_id">gtk-goto-top</property>
+                <signal name="clicked" handler="up_sys"/>
+              </widget>
+              <packing>
+                <property name="expand">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkToolButton" id="up_db">
+                <property name="visible">True</property>
+                <property name="tooltip" translatable="yes">Refresh database</property>
+                <property name="use_underline">True</property>
+                <property name="stock_id">gtk-refresh</property>
+                <signal name="clicked" handler="refr_db"/>
+              </widget>
+              <packing>
+                <property name="expand">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkSeparatorToolItem" id="separatortoolitem4">
+                <property name="visible">True</property>
+              </widget>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkToolButton" id="search">
+                <property name="visible">True</property>
+                <property name="tooltip" translatable="yes">Search packages</property>
+                <property name="stock_id">gtk-find</property>
+                <signal name="clicked" handler="search_pac"/>
+                <accelerator key="S" modifiers="GDK_CONTROL_MASK" signal="clicked"/>
+              </widget>
+              <packing>
+                <property name="expand">False</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkHPaned" id="hpaned">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="position">150</property>
+            <child>
+              <widget class="GtkScrolledWindow" id="repos_scr">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                <property name="shadow_type">GTK_SHADOW_IN</property>
+                <child>
+                  <widget class="GtkTreeView" id="repos_tree">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="headers_visible">False</property>
+                    <property name="enable_search">False</property>
+                    <signal name="cursor_changed" handler="repo_changed"/>
+                  </widget>
+                </child>
+              </widget>
+              <packing>
+                <property name="resize">False</property>
+                <property name="shrink">True</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkVPaned" id="vpaned1">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <child>
+                  <widget class="GtkVPaned" id="vpaned">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="position">219</property>
+                    <child>
+                      <widget class="GtkScrolledWindow" id="pacs_scr">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                        <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                        <child>
+                          <widget class="GtkTreeView" id="pacs_tree">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="reorderable">True</property>
+                            <property name="rules_hint">True</property>
+                            <property name="enable_search">False</property>
+                            <signal name="button_press_event" handler="show_popup"/>
+                            <signal name="cursor_changed" handler="pacs_changed"/>
+                          </widget>
+                        </child>
+                      </widget>
+                      <packing>
+                        <property name="resize">False</property>
+                        <property name="shrink">True</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkNotebook" id="notebook1">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <child>
+                          <widget class="GtkScrolledWindow" id="scrolledwindow">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                            <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                            <property name="shadow_type">GTK_SHADOW_IN</property>
+                            <child>
+                              <widget class="GtkTextView" id="summary">
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="editable">False</property>
+                                <property name="wrap_mode">GTK_WRAP_WORD</property>
+                                <property name="cursor_visible">False</property>
+                              </widget>
+                            </child>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkLabel" id="label1">
+                            <property name="visible">True</property>
+                            <property name="label" translatable="yes">Summary</property>
+                          </widget>
+                          <packing>
+                            <property name="type">tab</property>
+                            <property name="tab_fill">False</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="GtkScrolledWindow" id="scrolledwindow1">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                            <property name="shadow_type">GTK_SHADOW_IN</property>
+                            <child>
+                              <widget class="GtkTreeView" id="files">
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="headers_visible">False</property>
+                                <property name="reorderable">True</property>
+                                <property name="enable_search">False</property>
+                              </widget>
+                            </child>
+                          </widget>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="GtkLabel" id="label2">
+                            <property name="visible">True</property>
+                            <property name="label" translatable="yes">Files</property>
+                          </widget>
+                          <packing>
+                            <property name="type">tab</property>
+                            <property name="position">1</property>
+                            <property name="tab_fill">False</property>
+                          </packing>
+                        </child>
+                      </widget>
+                      <packing>
+                        <property name="resize">True</property>
+                        <property name="shrink">True</property>
+                      </packing>
+                    </child>
+                  </widget>
+                  <packing>
+                    <property name="resize">False</property>
+                    <property name="shrink">True</property>
+                  </packing>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+              </widget>
+              <packing>
+                <property name="resize">True</property>
+                <property name="shrink">True</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkStatusbar" id="statusbar">
+            <property name="visible">True</property>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+  <widget class="GtkMenu" id="popup_menu">
+    <child>
+      <widget class="GtkImageMenuItem" id="popup_add_install">
+        <property name="visible">True</property>
+        <property name="label" translatable="yes">_Add to install queue</property>
+        <property name="use_underline">True</property>
+        <signal name="activate" handler="add_install"/>
+        <accelerator key="A" modifiers="GDK_CONTROL_MASK" signal="activate"/>
+        <child internal-child="image">
+          <widget class="GtkImage" id="image67">
+            <property name="visible">True</property>
+            <property name="stock">gtk-add</property>
+            <property name="icon_size">1</property>
+          </widget>
+        </child>
+      </widget>
+    </child>
+    <child>
+      <widget class="GtkImageMenuItem" id="popup_remove_install">
+        <property name="visible">True</property>
+        <property name="label" translatable="yes">Remove from _install queue</property>
+        <property name="use_underline">True</property>
+        <signal name="activate" handler="remove_install"/>
+        <accelerator key="A" modifiers="GDK_CONTROL_MASK | GDK_MOD1_MASK" signal="activate"/>
+        <child internal-child="image">
+          <widget class="GtkImage" id="image68">
+            <property name="visible">True</property>
+            <property name="stock">gtk-undo</property>
+            <property name="icon_size">1</property>
+          </widget>
+        </child>
+      </widget>
+    </child>
+    <child>
+      <widget class="GtkSeparatorMenuItem" id="separator5">
+        <property name="visible">True</property>
+      </widget>
+    </child>
+    <child>
+      <widget class="GtkImageMenuItem" id="popup_add_remove">
+        <property name="visible">True</property>
+        <property name="label" translatable="yes">Add to _remove queue</property>
+        <property name="use_underline">True</property>
+        <signal name="activate" handler="add_remove"/>
+        <accelerator key="R" modifiers="GDK_CONTROL_MASK" signal="activate"/>
+        <child internal-child="image">
+          <widget class="GtkImage" id="image69">
+            <property name="visible">True</property>
+            <property name="stock">gtk-remove</property>
+            <property name="icon_size">1</property>
+          </widget>
+        </child>
+      </widget>
+    </child>
+    <child>
+      <widget class="GtkImageMenuItem" id="popup_remove_remove">
+        <property name="visible">True</property>
+        <property name="label" translatable="yes">R_emove from remove queue</property>
+        <property name="use_underline">True</property>
+        <signal name="activate" handler="remove_remove"/>
+        <accelerator key="R" modifiers="GDK_CONTROL_MASK | GDK_MOD1_MASK" signal="activate"/>
+        <child internal-child="image">
+          <widget class="GtkImage" id="image70">
+            <property name="visible">True</property>
+            <property name="stock">gtk-redo</property>
+            <property name="icon_size">1</property>
+          </widget>
+        </child>
+      </widget>
+    </child>
+    <child>
+      <widget class="GtkSeparatorMenuItem" id="separator6">
+        <property name="visible">True</property>
+      </widget>
+    </child>
+    <child>
+      <widget class="GtkImageMenuItem" id="search">
+        <property name="visible">True</property>
+        <property name="label" translatable="yes">_Search</property>
+        <property name="use_underline">True</property>
+        <signal name="activate" handler="search"/>
+        <accelerator key="S" modifiers="GDK_CONTROL_MASK" signal="activate"/>
+        <child internal-child="image">
+          <widget class="GtkImage" id="image71">
+            <property name="visible">True</property>
+            <property name="stock">gtk-find</property>
+            <property name="icon_size">1</property>
+          </widget>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</glade-interface>

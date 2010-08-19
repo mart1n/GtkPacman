@@ -1,0 +1,14 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=2.1
+Name=gtkpacman
+Comment=GTK archlinux package manager based on pacman
+Comment[it]=Manager dei pacchetti con interfaccia GTK basato su pacman
+GenericName=Package Manager
+Type=Application
+TryExec=/usr/bin/gtkpacman
+Exec=gksu gtkpacman
+Icon=/usr/share/gtkpacman/icons/pacman.png
+Terminal=false
+X-MultipleArgs=false
+Categories=Application;System;

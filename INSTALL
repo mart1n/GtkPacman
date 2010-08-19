@@ -1,0 +1,98 @@
+GUIDE TO INSTALLATION AND BASIC USAGE OF GtkPacman
+
+Index:
+  - 0. Intro
+  - 1. Installation
+	- 1.1. setup.py installation
+	- 1.2. Install from commnity repo
+	- 1.3. Install from package from berlios.de
+	- 1.4. Install from AUR
+	- 1.5. Install from PKGBUILD from berlios.de
+  - 2. Usage
+	- 2.1 Queue Actions
+        - 2.2 Immediate Actions
+  - 3. Uninstall
+
+
+0. INTRO
+
+GtkPacman is a package manager based on pacman written completely in python. It's pourpose is to make the system administration easier for package management tasks. It's a gui, so the novice will not be frightened by the command line, and its design is intuitive. Since it's in python you do not need to compile it, and installation is thus fast and easy.
+
+1. INSTALLATION
+
+There's a few of modes to install GtkPacman, here's them all.
+
+1.1 setup.py install
+
+Source code tarballs ship a setup.py script, which can install gtkpacman on your filesyste. Since this files will not be under the control of gtkpacman this installation mode it's not recomended. Indeed it exists only for the package builders.
+
+1.2 Install from community repo
+
+This method uses pacman to install gtkpacman. You have to uncomment the [community] entry in your /etc/pacman.conf and then use this command:
+
+     # pacman -Sy gtkpacman
+
+This will download the community repo's database and it will install gtkpacman.
+
+1.3 Install from berlios.de package
+
+On berlios.de you can find packages made on my own. They're built only for testing releases, since the stable ones are avaible from community repo (see 1.2).
+To use this method you have to download the *.pkg.tar.gz file from berlios.de download server and use this procedure:
+
+     # cd path/to/gtkpacman/package
+     # pacman -U gtkpacman-X.Y-Z.pkg.tar.gz 
+	(where X.Y is the gtkpacman version and Z the package release)
+
+1.4 Install from AUR
+
+A PKGBUILD for svn version of gtkpacman. USE IT ONLY FOR TESTING PUORPOSES.
+To use it you can use aurbuild (if you have it installed), or you can download the PKGBUILD and build the package by hand.
+Using aurbuild the command you need is:
+
+     # aurbuild -s gtkpacman-svn
+
+Then enter 'v' at the prompt to use versionpkg (you need to install it). versionpkg is avaible on community repo. aurbuild must be built by hand downloading it PKGBUILD from AUR.
+
+If you don't have/don't want to use aurbuild you can download the archive from AUR. Do this when you downloaded it:
+
+     # cd /path/to/gtkpacman-svn/archive
+     # tar xzf gtkpacman-svn.tar.gz
+     # cd gtkpacman-svn
+     # versionpkg
+     # pacman -U gtkpacman-svn-X-Y.pkg.tar.gz
+        (where X is the rev from svn and Y the release of the package, usually 1)
+
+1.5 Install from PKGBUILD from berlios.de
+
+A PKGBUILD is also avaible on berlios.de for the dev releases. Tou use it download it and use this procedure:
+
+     # cd /path/to/PKGBUILD
+     # mkdir gtkpacman/
+     # mv PKGBUILD gtkpacman/
+     # cd gtkpacman/
+     # makepkg
+     # pacman -U gtkpacman-X.Y-Z.pkg.tar.gz
+
+2. Usage
+
+The gui of gtkpacman is pretty intuitive. In the main area you see the list of repos (on the left) the list of packages in the selected repo (on the right), and a notebook with the summary and filelist (if installed) of selected package. You can perform some actions immediatly, while some action will be queued and executed only when you click on the 'Execute' button.
+
+2.1 Queue Actions
+
+Those are actions which can envolve more than one package, i.e. install and remove of packages. When you select a package and click on the 'add to install queue', this package will be added to the install queue and will be installed when you'll execute the queued actions. The same for the remove queue. You can remove a package from the install or remove queue clicking on 'remove from add queue' or 'remove from remove queue'.
+
+2.2 Immediate Actions
+
+Those are actions which cannot envolve more than one package. They are: 'upgrade system', 'refresh database', 'install/upgrade from local file', 'clear cache' and 'empty cache'.
+The 'Upgrade system' action will upgrade all packages of which newer versions are avaible in the repos.
+The 'refresh database' action will update the repos' databases to the latest version avaible.
+The 'install/upgrade from local file' action, will prompt for a package file avaible locally on your system and it will install it.
+The 'clear cache' and 'empty cache' actions will remove old packages from the cache or empty it at all.
+
+3. Uninstall
+
+Uninstall is avaible only if you used a method which envolve the installation of an ArchLinux package. If it's so you have to do:
+
+	# pacman -R gtkpacman
+
+(It's theorically possible to use gtkpacman to remove gtkpacman, but i've not tested it)
