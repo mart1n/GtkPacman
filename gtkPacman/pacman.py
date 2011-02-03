@@ -243,7 +243,7 @@ class database(dict):
         size = self._get_size(desc_file)
 
         if pac.installed:
-            req_by = self._get_req_by(path)
+            req_by = self._get_req_by2(path)
             packager = self._get_packager(desc_file)
             builddate = self._get_builddate(desc_file)
             installdate = self._get_installdate(desc_file)
@@ -366,6 +366,32 @@ class database(dict):
             return ''
         
         reqs = depends[begin:end].strip().split("\n")
+        req_by = ", ".join(reqs)
+        return req_by
+
+    def _get_name(self, path):
+        """Gets the pac name from the desc file"""
+        desc = open("%s/desc" % path).read()
+        try:
+            begin = desc.index("%NAME%") + len("%NAME%")
+            end = desc.index("%", begin)
+        except Exception:
+            return ''
+
+        return desc[begin:end].strip()
+
+    def _get_req_by2(self, path):
+        """Set the list of packages that needs given pac"""
+        reqs = list()
+        dbpath = os.path.split(path)[0]
+        pacname = self._get_name(path)
+        for d in (d for d in os.listdir(dbpath) if os.path.isdir(os.path.join(dbpath, d))):
+            with open(os.path.join(dbpath, d, "depends")) as file:
+                for line in file:
+                    if line.strip() == pacname:
+                        reqs.append(self._get_name(os.path.join(dbpath, d)))
+                        break
+
         req_by = ", ".join(reqs)
         return req_by
 
